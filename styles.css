@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display&family=Quicksand:wght@300&display=swap");
+* {
+  margin: 0px;
+  border: 0px;
+  font-family: "Noto Sans Display", sans-serif;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  height: auto;
+  background: #d4a373;
+  background: linear-gradient(0deg, #d4a373 0%, #faedcd 0%, #e9edc9 90%);
+}
+
+@media only screen and (max-width: 480px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px auto 100% 100%;
+    grid-template-areas: "heading" "aside" "portfolio";
+    gap: 10px;
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    grid-template-rows: 100px 100%;
+    grid-template-areas: "heading heading" "aside portfolio";
+    gap: 10px;
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    grid-template-rows: 100px 100%;
+    grid-template-areas: "heading heading" "aside portfolio";
+    gap: 10px;
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    grid-template-rows: 100px 100%;
+    grid-template-areas: "heading heading" "aside portfolio";
+    gap: 10px;
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    grid-template-rows: 100px 100%;
+    grid-template-areas: "heading heading" "aside portfolio";
+    gap: 10px;
+    height: 100%;
+  }
+}
+
+.nav--link {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.nav--link:hover {
+  color: #d4a373;
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+.header__container {
+  grid-area: heading;
+  background-color: #e9edc9;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.header__container--menu {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  font-size: 20px;
+}
+
+.aside__container {
+  grid-area: aside;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  height: 75vh;
+  padding: 10%;
+}
+.aside__container--profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: #ccd5ae 2px solid;
+  background-color: rgba(254, 250, 224, 0.3);
+  width: 80%;
+  height: fit-content;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  font-size: 80%;
+}
+
+@media only screen and (max-width: 480px) {
+  .portfolio__container {
+    grid-area: portfolio;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr 5fr 5fr 5fr;
+  }
+  .portfolio__container--heading {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .portfolio__container {
+    grid-area: portfolio;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 5fr 5fr;
+  }
+  .portfolio__container--heading {
+    grid-row: 1/2;
+    grid-column: 1/3;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .portfolio__container {
+    grid-area: portfolio;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 5fr 5fr;
+  }
+  .portfolio__container--heading {
+    grid-row: 1/2;
+    grid-column: 1/3;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .portfolio__container {
+    grid-area: portfolio;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 5fr 5fr;
+  }
+  .portfolio__container--heading {
+    grid-row: 1/2;
+    grid-column: 1/3;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .portfolio__container {
+    grid-area: portfolio;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 5fr 5fr;
+  }
+  .portfolio__container--heading {
+    grid-row: 1/2;
+    grid-column: 1/3;
+    text-align: center;
+  }
+}
+
+.footer__container {
+  grid-area: footer;
+  background-color: #e9edc9;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: #ccd5ae 2px solid;
+  background-color: rgba(254, 250, 224, 0.3);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  margin: 0px 10px 10px 20px;
+  padding: 0% 10%;
+}
+.card--image {
+  height: 50%;
+}
+
+.card > p {
+  font-size: 85%;
+}
+
+.icon {
+  margin: 2%;
+}
+
+.icon__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: x-large;
+}
+
+.aside--image {
+  width: 70%;
+}
+
+.text--centre {
+  text-align: center;
+}
+.text--left {
+  text-align: left;
+}
+.text--right {
+  text-align: right;
+}
+
+/*# sourceMappingURL=styles.css.map */
